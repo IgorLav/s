@@ -1,0 +1,46 @@
+$gap: 20;
+
+.grid {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: #{$gap}px;
+  padding-left: #{$gap}px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -#{$gap}px;
+    margin-right: -#{$gap}px;
+
+    &_align-center {
+      align-items: center;
+    }
+  }
+
+  &__cell {
+    padding-left: #{$gap}px;
+    padding-right: #{$gap}px;
+
+    &_4 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &_6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &_8 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &_12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

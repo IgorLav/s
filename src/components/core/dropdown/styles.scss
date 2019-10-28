@@ -1,0 +1,57 @@
+@import "../../../assets/styles/variables";
+
+$bodyTopMargin: 12;
+
+.dropdown {
+  position: relative;
+
+  &_bottom {
+    .arrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin-left: -3px;
+      margin-top: 9px;
+      top: 100%;
+      left: 50%;
+
+      border: 8px solid;
+      border-color: #fff #fff transparent transparent;
+
+      transform-origin: 0 0;
+      transform: rotate(-45deg) translatex(-50%);
+
+      box-shadow: 1px -1px 1px 0 $border-color;
+      z-index: 81;
+    }
+  }
+
+  &__handler {
+    position: relative;
+    display: block;
+    border-radius: 2px;
+    padding: 3px 10px 5px;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid $border-color;
+    transition: $transition-default;
+    &:hover,
+    &_active {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    margin-top: #{$bodyTopMargin}px;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    z-index: 80;
+  }
+}

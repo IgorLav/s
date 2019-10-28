@@ -1,0 +1,29 @@
+@import "../../../assets/styles/variables";
+
+.accordion {
+  &__header {
+    background-color: #f8f8f8;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    transition: background-color 0.6s ease;
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    border-top: none;
+    transition: max-height 0.6s ease;
+  }
+
+  &__content {
+    padding: 10px;
+  }
+}

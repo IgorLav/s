@@ -1,0 +1,39 @@
+@import "../../assets/styles/variables";
+
+.smart-menu {
+  &_wrapped {
+    .smart-menu__list {
+      flex-wrap: nowrap;
+    }
+
+    .smart-menu__item {
+      flex: 1 1 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 5px 0;
+    margin-right: 15px;
+    text-transform: capitalize;
+    font-size: 12px;
+    user-select: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    transition: $transition-default;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

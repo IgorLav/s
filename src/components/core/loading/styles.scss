@@ -1,0 +1,28 @@
+.loading {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  &_dual-ring {
+    &:after {
+      content: "";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #cef transparent #cef transparent;
+      animation: dual-ring 1s linear infinite;
+    }
+  }
+}
+
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

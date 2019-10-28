@@ -1,0 +1,55 @@
+@import '../../../../assets/styles/variables.scss';
+
+.filter-bar {
+  padding: 5px 0;
+  background-color: #fff;
+  border-bottom: 1px solid $border-color;
+
+  &__inner-wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.dropdown-filter {
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    max-height: 240px;
+    overflow-x: auto;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+    padding-top: 10px;
+  }
+
+  &__option {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.wrapped-options {
+  .accordion {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrapped-options {
+    .dropdown__body {
+      min-width: calc(100vw - 20px);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../../assets/styles/variables";
+
+.input{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid $input-border-color;
+  padding: 3px 7px;
+  color: $color-ordinary;
+  flex-shrink: 0;
+  &__field {
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+  }
+  &__prepended-element,
+  &__appended-element {
+    flex-shrink: 0;
+  }
+}

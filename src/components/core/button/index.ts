@@ -1,0 +1,1 @@
+export {Button, BTN_TYPES} from './button.component';

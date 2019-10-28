@@ -1,0 +1,28 @@
+@import "../../../assets/styles/variables";
+
+.btn {
+  display: inline-block;
+  font-size: inherit;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  appearance: none;
+  background-color: transparent;
+  user-select: none;
+
+  &_default {
+    background-color: #fff;
+    border-color: $border-color;
+  }
+
+  &_primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: #fff;
+  }
+
+  &_stroke-primary {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+}

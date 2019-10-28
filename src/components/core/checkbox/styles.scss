@@ -1,0 +1,41 @@
+@import "../../../assets/styles/variables";
+
+.checkbox {
+  &-wrap {
+    display: flex;
+    width: 100%;
+    &_inline {
+      display: inline-flex;
+      width: auto;
+    }
+  }
+
+  &_button {
+    background-color: #fcfcfc;
+    padding: 5px;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    user-select: none;
+
+    &.checkbox_checked {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+
+    .checkbox__checkmark {
+      display: none;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__checkmark {
+
+  }
+}
