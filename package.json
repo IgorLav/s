@@ -1,16 +1,25 @@
 {
-  "name": "my-app",
+  "name": "iLavsTestTask",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/classnames": "2.2.9",
     "@types/jest": "24.0.19",
     "@types/node": "12.7.12",
     "@types/react": "16.9.6",
     "@types/react-dom": "16.9.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "@types/react-redux": "7.1.4",
+    "@types/redux": "3.6.0",
+    "classnames": "2.2.6",
+    "node-sass": "4.12.0",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-redux": "7.1.1",
     "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
+    "redux": "4.0.4",
+    "redux-thunk": "2.3.0",
+    "typescript": "3.6.4",
+    "uniqid": "5.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,7 +32,7 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.1%",
       "not dead",
       "not op_mini all"
     ],
