@@ -13,7 +13,7 @@ export type PillData = {
 
 export type Props = {
     label: ReactNode,
-    data: any[],  // TODO: add correct annotation
+    data: {name: string, children: PillData[]}[],
     handler: (key: string, id: string) => void,
     emptyDataMessage: ReactNode,
     cssClass: string
@@ -21,7 +21,7 @@ export type Props = {
 
 export class Pills extends Component<Props> {
     static defaultProps = {
-        data: {},
+        data: [],
         emptyDataMessage: 'No data.',
         cssClass: ''
     };
@@ -30,7 +30,7 @@ export class Pills extends Component<Props> {
         const {data, handler} = this.props;
 
         return data.map(pillGroupData => {
-            if(pillGroupData.children.length === 0) {
+            if (pillGroupData.children.length === 0) {
                 return null;
             }
 

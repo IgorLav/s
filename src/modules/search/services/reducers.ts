@@ -44,7 +44,6 @@ const defaultState = {
 };
 
 export const search = (state: SearchState = defaultState, action: AnyAction) => {
-console.log(action.type);
     switch (action.type) {
         case GET_FILTERS_DATA:
             return {

@@ -1,4 +1,5 @@
 import {FilterItemType, SelectedFilter} from "../../services/reducers";
+import {PillData} from "../../../../components/core/pills/pills.component";
 
 type Params = {
     selectedFilters: SelectedFilter[],
@@ -10,7 +11,7 @@ export const preparePillsData = ({selectedFilters, filtersOptions}: Params) => {
         return selectedFilters.map(item => {
             const optionData = filtersOptions.find(group => group.id === item.name);
 
-            const children = optionData ?
+            const children = (optionData ?
                 item.checkedIds.map(id => {
                     const data = optionData.children.find(option => id === option.id);
                     return data ? {
@@ -20,9 +21,9 @@ export const preparePillsData = ({selectedFilters, filtersOptions}: Params) => {
                         removable: true,
                         disabled: false
                     } : null
-                }).filter(Boolean) : [];
+                }).filter(Boolean) : []) as PillData[];
 
-            return {...item, children}
+            return {name: item.name, children}
         });
     }
 

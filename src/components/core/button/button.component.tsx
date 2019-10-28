@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './styles.scss';
 
 type Props = {
-    type: string, // @todo exact type annotation for type prop
+    type: string,
     caption?: ReactNode,
     handler: (e: FormEvent<HTMLButtonElement>) => void,
     disabled: boolean
